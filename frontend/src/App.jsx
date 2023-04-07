@@ -1,9 +1,12 @@
-import './App.css'
+import './app.css'
+import Home from './pages/home/Home'
 
 function App() {
 
   return (
-   <h1>Pournima</h1>
+    <div className="app">
+      <Home />
+    </div>
   )
 }
 
