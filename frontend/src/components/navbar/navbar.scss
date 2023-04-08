@@ -1,21 +1,34 @@
-.navbar{
+.nav {
+  padding: 20px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+
+  transition-timing-function: ease-in;
+  transition: all .5s;
+  &.nav_black {
+    background: #000;
+  }
+
+  .nav_contents {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    .logo {
+      position: fixed;
+      left: 30px;
+      width: 100px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+  .avatar {
+    width: 35px;
+
     position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #111;
-    padding: 0 30px;
-    z-index: 1;
-
-    transition-timing-function: ease-in;
-    transition: all .5s;
-
-    .logo{
-        width: 120px;
-    }
-    .avatar{
-        width: 35px;
-    }
+    right: 30px;
+    object-fit: contain;
+    cursor: pointer;
+  }
 }

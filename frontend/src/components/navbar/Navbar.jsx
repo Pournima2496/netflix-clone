@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.scss";
 
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+
+  const transitionNavbar = () => {
+    if (window.scrollY > 100) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", transitionNavbar);
+    return () => window.removeEventListener("scroll", transitionNavbar);
+  }, []);
+
   return (
-    <div className="navbar">
+    <div className={`nav ${show && "nav_black"}`}>
+      <div className="nav_contents">
         <img
-          src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Logonetflix.png/800px-Logonetflix.png?20170904093427"
           alt="netflix-logo"
           className="logo"
         />
@@ -15,6 +31,7 @@ const Navbar = () => {
           className="avatar"
         />
       </div>
+    </div>
   );
 };
 
