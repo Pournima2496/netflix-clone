@@ -1,0 +1,108 @@
+.login {
+  position: relative;
+  height: 100%;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/f1c3c4eb-2fea-42c7-9ebd-1c093bd8a69d/9c9af369-7a8c-4c8f-8e4a-d6c9d655f713/IN-en-20230403-popsignuptwoweeks-perspective_alpha_website_small.jpg")
+    center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .logo {
+    position: fixed;
+    left: 0;
+    width: 150px;
+    padding: 20px;
+    object-fit: contain;
+  }
+
+  .login_button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    height: 40px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .login_bg {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .login_contents {
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 50px;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+      .login_email {
+        padding: 10px;
+        outline-width: 0;
+        height: 48px;
+        width: 40%;
+        font-size: 16px;
+        font-weight: 400;
+        border: 1px solid #fff;
+        opacity: .8;
+        max-width: 600px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: transparent;
+
+        &::placeholder{
+          color: #fff;
+        }
+        
+      }
+      .getStarted {
+        font-size: 1rem;
+        padding: 15px 20px;
+        color: #fff;
+        background-color: #e50914;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
